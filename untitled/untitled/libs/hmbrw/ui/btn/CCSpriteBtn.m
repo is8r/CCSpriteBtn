@@ -24,9 +24,9 @@
 	toggleMode = FALSE;
 	isToggle = FALSE;
 	
-	deffile = filename;
-	rofile = rofilename;
-	
+	deffile = [filename copy];
+	rofile = [rofilename copy];
+    
 	CCTexture2D *texture = [[CCTextureCache sharedTextureCache] addImage:deffile];
 	if( texture ) {
 		CGRect rect = CGRectZero;
@@ -45,8 +45,8 @@
 	toggleMode = TRUE;
 	isToggle = FALSE;
 	
-	deffile = filename;
-	togglefile = togglefilename;
+	deffile = [filename copy];
+	togglefile = [togglefilename copy];
 	
 	CCTexture2D *texture = [[CCTextureCache sharedTextureCache] addImage: filename];
 	if( texture ) {
